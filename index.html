@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学校の掲示板</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Twitter-Like App</title>
 </head>
 <body>
-    <header>
-        <h1>学校の掲示板</h1>
-    </header>
-    <main>
-        <section class="post-form">
-            <h2>新しい投稿</h2>
-            <form id="post-form">
-                <input type="text" id="author" placeholder="名前" required>
-                <textarea id="message" placeholder="メッセージ" required></textarea>
-                <button type="submit">投稿</button>
-            </form>
-        </section>
-        <section class="post-list">
-            <h2>投稿一覧</h2>
-            <ul id="posts-list"></ul>
-        </section>
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <h1>Twitter-Like App</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="tweet-form">
+      <textarea placeholder="What's happening?"></textarea>
+      <button>Post</button>
+    </section>
+    
+    <section class="tweets">
+      <!-- Tweet items will be added here dynamically -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Twitter-Like App. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
