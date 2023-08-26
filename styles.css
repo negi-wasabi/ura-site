@@ -1,54 +1,44 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
+/* Basic styling */
 body {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header Styles */
 header {
-  background-color: #00aced;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+    background-color: #1DA1F2;
+    color: white;
+    padding: 1rem;
 }
 
 nav ul {
-  list-style: none;
+    list-style: none;
+    display: flex;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
+nav li {
+    margin-right: 1rem;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+nav a {
+    text-decoration: none;
+    color: white;
 }
 
-/* Main Content Styles */
-.main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+main {
+    padding: 2rem;
 }
 
-.tweet-form textarea {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
+/* Add more styling as needed */
 
-/* Footer Styles */
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ccc;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    /* Add responsive styling */
 }
