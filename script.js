@@ -99,6 +99,58 @@ tweetForm.addEventListener('submit', function (e) {
 });
 
 
+// 既存のJavaScriptコードをそのまま残します
+
+// ツイートをタイムラインに追加する関数
+function addTweetToTimeline(tweet) {
+    const tweetsSection = document.getElementById('tweets');
+
+    const tweetDiv = document.createElement('div');
+    tweetDiv.classList.add('tweet');
+    tweetDiv.innerHTML = `
+        <img src="${tweet.userProfileImage}" alt="User Profile">
+        <div class="tweet-content">
+            <p class="user-name">${tweet.userName}</p>
+            <p class="tweet-text">${tweet.text}</p>
+            <div class="tweet-actions">
+                <button class="like-button">Like</button>
+                <button class="retweet-button">Retweet</button>
+                <button class="reply-button">Reply</button>
+            </div>
+        </div>
+    `;
+
+    // タイムラインにツイートを追加
+    tweetsSection.prepend(tweetDiv); // 最新のツイートを先頭に追加
+}
+
+// ツイートの投稿フォームに対するイベントリスナーを追加
+const tweetForm = document.getElementById('tweet-form');
+const tweetTextArea = document.getElementById('tweet-text');
+
+tweetForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // デフォルトのフォーム送信を防止
+
+    const tweetText = tweetTextArea.value; // ツイートのテキストを取得
+
+    // サーバーにツイートを投稿するためのHTTPリクエストを作成
+    // この部分はバックエンドの実装に依存します
+
+    // 例: サーバーから返された新しいツイートをタイムラインに追加
+    const newTweet = {
+        userProfileImage: 'user_profile.jpg',
+        userName: 'Your Name',
+        text: tweetText,
+    };
+    addTweetToTimeline(newTweet); // 新しいツイートをタイムラインに追加
+
+    // ツイートのテキストエリアをクリア
+    tweetTextArea.value = '';
+});
+
+// 既存のJavaScriptコードをそのまま残します
+
+
 
 // Fetch and display data when the page loads
 fetchAndDisplayTweets();
