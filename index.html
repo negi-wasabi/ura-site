@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポップアップサイト</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Twitter-like App</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Messages</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button id="popupButton1">ポップアップ1を表示</button>
+    <button id="popupButton2">ポップアップ2を表示</button>
+    <button id="popupButton3">ポップアップ3を表示</button>
 
-    <main>
-
-
-    <section id="tweet-form">
-        <h2>Compose a Tweet</h2>
-        <form id="tweet-form">
-            <textarea id="tweet-text" rows="4" cols="50" placeholder="What's happening?"></textarea>
-            <button type="submit">Tweet</button>
-        </form>
-    </section>
-        <section id="tweets">
-    </main>
-
-    <aside>
-        <div id="user-profile">
-            <!-- User profile information -->
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup(1)">×</span>
+            <p>ポップアップ1のコンテンツ</p>
         </div>
-        <div id="trending-topics">
-            <!-- Trending topics will be displayed here -->
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup(2)">×</span>
+            <p>ポップアップ2のコンテンツ</p>
         </div>
-    </aside>
+    </div>
 
-    <footer>
-        <p>&copy; 2023 Twitter-like App</p>
-    </footer>
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup(3)">×</span>
+            <p>ポップアップ3のコンテンツ</p>
+        </div>
+    </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
