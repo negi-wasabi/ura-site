@@ -1,44 +1,24 @@
-/* Basic styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #1DA1F2;
-    color: white;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
+.popup-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-nav li {
-    margin-right: 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-}
-
-main {
-    padding: 2rem;
-}
-
-/* Add more styling as needed */
-
-footer {
+.popup {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
     text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    border-top: 1px solid #ccc;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    /* Add responsive styling */
+.popup h2 {
+    margin-top: 0;
 }
